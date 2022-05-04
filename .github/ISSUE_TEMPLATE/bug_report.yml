@@ -1,0 +1,71 @@
+name: Bug Report
+description: Report a bug. Please provide enough information so that we can reproduce the problem.
+title: "Bug: "
+labels: [bug]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is for reporting technical issues.
+        If you have a question or you're looking for support, please visit [Big Rig Media](#).
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I have cleared out local cache
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      value: |
+        #### What's wrong?
+
+        #### What have you tried?
+
+        #### What insights have you gained?
+
+        #### Possible solutions
+
+        #### Temporary workarounds
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps To Reproduce
+      description: |
+        Non-reproducible issues may be immediately closed as not actionable.
+        Please provide reproduction steps as detailed as possible.
+      value: |
+        1.
+        1.
+        1.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      placeholder: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      placeholder: What actually happens?
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
